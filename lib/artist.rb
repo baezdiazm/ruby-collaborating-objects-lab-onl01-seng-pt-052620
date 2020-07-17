@@ -14,13 +14,14 @@ class Artist
     song.artist = self
   end
 
+  def self.find(name)
+   @@all.find do |artist|
+     artist.name == name
+   end
+  end
+ 
   def self.find_or_create_by_name(name)
-    if name == nil
-      artist = Artist.new(name)
-      artist
-    else
-      self.all.detect {|artist| artist.name == name}
-    end
+    
   end
 
   def self.all
