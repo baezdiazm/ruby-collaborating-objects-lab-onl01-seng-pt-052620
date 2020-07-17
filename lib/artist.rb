@@ -7,6 +7,7 @@ class Artist
   def initialize(name)#artist_name
     @name = name
     @songs = [] #array of songs for each instance
+    @@all << self
   end
 
   #this exposes the @@all Class Variable
