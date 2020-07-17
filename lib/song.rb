@@ -13,6 +13,7 @@ class Song
     song = Song.new(song_name)
     song.artist_name = artist_name
     song
+    @@all_songs << song
   end
 
   def artist_name=(name)
